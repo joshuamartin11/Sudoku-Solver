@@ -34,6 +34,8 @@ def solve(solPuzzle,curC):
         curC = (curC[0], curC[1] + 1)
         if curC[1] == 9:
             curC = (curC[0] + 1, 0)
+            if curC[0] == 9:
+                return True
     solved = False
 
     while not solved:
@@ -58,15 +60,15 @@ def solve(solPuzzle,curC):
         
 
 def main():
-    puzzle =    ["954000372",
-                 "000940005",
-                 "000000004",
-                 "023078000",
-                 "000002850",
-                 "608000023",
-                 "702050040",
-                 "410009208",
-                 "006004000"]
+    puzzle =    ["530070000",
+                 "600195000",
+                 "098000060",
+                 "800060003",
+                 "400803001",
+                 "700020006",
+                 "060000280",
+                 "000419005",
+                 "000080079"]
 
     solPuzzle = list()
     for r in puzzle:
